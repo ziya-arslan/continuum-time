@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Timer from "./components/Timer";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -12,6 +13,7 @@ function App() {
       <button data-test="button" onClick={() => setShow(!show)}>
         buton
       </button>
+      <Timer />
       <footer data-test="footer"></footer>
     </div>
   );
