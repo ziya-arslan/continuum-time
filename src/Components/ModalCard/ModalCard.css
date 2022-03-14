@@ -17,7 +17,6 @@
   outline: none !important;
 }
 
-.save-btn {
-  background-color: #ff6695;
+.btn-save {
   border-radius: 15px;
 }
