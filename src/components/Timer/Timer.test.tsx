@@ -2,7 +2,6 @@ import Timer from "./Timer";
 import { findByTestAttr } from "../../test/testUtils";
 import { mount, shallow, ShallowWrapper } from "enzyme";
 import { fireEvent, getByTestId, render } from "@testing-library/react";
-import { ControlButtons } from "../ControlButton";
 
 describe("Testing Timer Component", () => {
   let container: ShallowWrapper<

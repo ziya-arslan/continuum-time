@@ -41,21 +41,19 @@ function ControlButtons(props: Props) {
         <CButton
           buttonAction={handleStopButton}
           buttonValue="stop"
-          className="self-end rounded-full fill-white "
           path={"../../assets/fluent_record-stop-16-filled.svg"}
         />
       ) : (
         <CButton
           buttonAction={handlePlayButton}
           buttonValue="start"
-          className="self-end rounded-full fill-white"
           path="../../assets/ant-design_play-circle-filled.svg"
         />
       )}
+      {/* TODO: button class ml-2 rounded-full fill-white */}
       <CButton
         buttonAction={handleResetButton}
         buttonValue="reset"
-        className="ml-2 rounded-full fill-white"
         path="../../assets/ri_restart-fill.svg"
       />
     </div>

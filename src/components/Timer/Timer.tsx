@@ -4,28 +4,23 @@ import { ControlButtons } from "../ControlButton";
 
 function Timer() {
   const [time, setTime] = useState<number>(0);
-  const [timerArray, setTimerArray] = useState<Array<number | string>>([]);
-
+  const [timeT, setTimeT] = useState("");
   useEffect(() => {
     let timeArray: Array<number | string> = Time(time);
-    setTimerArray(timeArray);
+    setTimeT(`${timeArray[0]} : ${timeArray[1]} : ${timeArray[2]} `);
   }, [time]);
 
   return (
-    <div className="flex flex-col bg-gradient-to-b from-pink-50 to-yellow  w-full h-full">
-      <div className="items-center flex flex-col mt-28  h-full w-full ">
-        <div className="h-3 mr-1 rounded-lg w-3/4 border border-white"></div>
+    <div className="flex flex-col w-full h-full justify-center">
+      <div className="items-center flex flex-col">
+        <div className="h-3 mr-1 rounded-lg w-5/6 border border-white bg-white" />
         <div
           data-testid="timer"
-          className="flex flex-row tracking-normal ml-8 mt-8 font-Lexend text-6xl text-white font-thin h-full"
+          className="flex flex-row tracking-normal ml-8 mt-8 font-Lexend text-[10rem] text-white font-thin h-full"
         >
-          <p data-testid="hours">{timerArray[0]}</p>
-          <span>:</span>
-          <p data-testid="minute">{timerArray[1]}</p>
-          <span>:</span>
-          <p data-testid="second">{timerArray[2]}</p>
+          <p>{timeT}</p>
         </div>
-        <div className="h-3 mr-1 mt-10 rounded-lg w-3/4 border border-white"></div>
+        <div className="h-3 mr-1 mt-10 rounded-lg w-5/6 border border-white bg-white" />
       </div>
       <ControlButtons setTime={setTime} />
     </div>

@@ -4,10 +4,9 @@ type cButton = {
   buttonAction: () => void;
   buttonValue: string;
   path: string;
-  className: string;
 };
 
-const CButton = ({ buttonAction, buttonValue, path, className }: cButton) => {
+const CButton = ({ buttonAction, buttonValue, path }: cButton) => {
   return (
     <div className="rounded-full">
       <button
@@ -16,7 +15,11 @@ const CButton = ({ buttonAction, buttonValue, path, className }: cButton) => {
         onClick={() => buttonAction()}
         id={buttonValue}
       >
-        <img className={className} src={path} alt="icon" />
+        <img
+          className="self-end rounded-full fill-white "
+          src={path}
+          alt="icon"
+        />
       </button>
     </div>
   );

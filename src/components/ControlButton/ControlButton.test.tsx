@@ -12,7 +12,7 @@ describe("Control Buttons", () => {
   >;
 
   beforeEach(() => {
-    return (container = shallow(<ControlButtons />));
+    return (container = shallow(<ControlButtons setTime={() => null} />));
   });
 
   it("should render a <div />", () => {
@@ -22,7 +22,7 @@ describe("Control Buttons", () => {
 
 describe("Testing Functionalities of Timer Component", () => {
   it("should change isRunning state when the start button is clicked", () => {
-    const { container } = render(<ControlButtons />);
+    const { container } = render(<ControlButtons setTime={() => null} />);
     const runState = getByTestId(container, "isRunning");
     const clickOnElement = getByTestId(container, "start");
     fireEvent.click(clickOnElement);
@@ -30,7 +30,9 @@ describe("Testing Functionalities of Timer Component", () => {
   });
 
   it("should change isRunning false when the stop button is clicked", () => {
-    const { container } = render(<CButton />);
+    const { container } = render(
+      <CButton buttonAction={() => null} buttonValue="dsadsa" path="dfksdalf" />
+    );
     const runState = getByTestId(container, "isRunning");
     const clickOnElement = getByTestId(container, "stop");
     fireEvent.click(clickOnElement);
@@ -38,7 +40,9 @@ describe("Testing Functionalities of Timer Component", () => {
   });
 
   it("should change isRunning state false when the reset button is clicked", () => {
-    const { container } = render(<CButton />);
+    const { container } = render(
+      <CButton buttonAction={() => null} buttonValue="dsadsa" path="dfksdalf" />
+    );
     const runState = getByTestId(container, "isRunning");
     const clickOnElement = getByTestId(container, "reset");
     fireEvent.click(clickOnElement);
