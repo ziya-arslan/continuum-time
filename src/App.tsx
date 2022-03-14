@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import BeginButton from "./component/BeginButton/BeginButton";
 import ModalCard from "./component/ModalCard/ModalCard";
 
@@ -16,6 +17,7 @@ function App() {
       </button>
       <footer data-test="footer"></footer> */}
       <ModalCard />
+
     </div>
   );
 }
