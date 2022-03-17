@@ -1,7 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import CButton from "./CButton";
-
+import restartIcon from "../../Assets/svg/ri_restart-fill.svg";
+import stopIcon from "../../Assets/svg/fluent_record-stop-16-filled.svg";
+import playIcon from "../../Assets/svg/ant-design_play-circle-filled.svg";
 type Props = {
   setTime: Function;
 };
@@ -41,20 +43,20 @@ function ControlButtons(props: Props) {
         <CButton
           buttonAction={handleStopButton}
           buttonValue="stop"
-          path={"../../assets/fluent_record-stop-16-filled.svg"}
+          path={stopIcon}
         />
       ) : (
         <CButton
           buttonAction={handlePlayButton}
           buttonValue="start"
-          path="../../assets/ant-design_play-circle-filled.svg"
+          path={playIcon}
         />
       )}
       {/* TODO: button class ml-2 rounded-full fill-white */}
       <CButton
         buttonAction={handleResetButton}
         buttonValue="reset"
-        path="../../assets/ri_restart-fill.svg"
+        path={restartIcon}
       />
     </div>
   );
