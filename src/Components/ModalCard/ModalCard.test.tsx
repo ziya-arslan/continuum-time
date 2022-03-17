@@ -11,7 +11,7 @@ describe("Modal Card testing", () => {
   });
 
   test("render modal card", () => {
-    const ModalComponent = findByTestAttr(wrapper, "modalCard");
+    const ModalComponent = findByTestAttr(wrapper, "modal-card");
     expect(ModalComponent).toHaveLength(1);
   });
 
@@ -24,10 +24,10 @@ describe("Modal Card testing", () => {
 
   test("render the button with text of Save", () => {
     // const saveBtn = findByTestAttr(wrapper, "save-btn");
-    expect(wrapper.find(".save-btn").text()).toBe("Save");
+    expect(wrapper.find(".btn-save").text()).toBe("save");
   });
 
   test("render click event of save button", () => {
-    wrapper.find(".save-btn").simulate("click");
+    wrapper.find(".btn-save").simulate("click");
   });
 });
