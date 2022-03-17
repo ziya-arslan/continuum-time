@@ -1,5 +1,4 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
 import App from "./App";
 import { mount } from "enzyme";
 import { findByTestAttr } from "./test/testUtils";
